@@ -8,7 +8,7 @@ This guide explains how to set up Void Linux:
 - Using full disk encryption - **including** /boot, with LUKS + LVM
 - Uses btrfs as filesystem
 - Uses niri, a scrollable-tiling Wayland compositor.
-- Uses my predifined settings, such as polkit rules and dotfiles
+- Uses my predefined settings, such as polkit rules and dotfiles
 ## The process
 
 ### Pre-chroot
@@ -16,7 +16,7 @@ This guide explains how to set up Void Linux:
 # boot Void live system and log in using root:voidlinux
 # if running XFCE Live, then execute sudo -i bash
 fdisk /dev/sda
-# g to create a new GPT partition tab
+# g to create a new GPT partition table
 # n new partition with +300M
 # t 1 to set partition type to EFI System Partition
 # n new partition with remaining space
@@ -58,7 +58,7 @@ xchroot /mnt /bin/bash
 
 ### Post-chroot
 ```bash
-passwd root -l #deactivates root account, if you don't want it, simply execute passwd root
+passwd root -l #Disables the root account. If you want to keep it, simply execute passwd root instead.
 chown root:root /
 chmod 755 /
 
@@ -182,7 +182,7 @@ su - voiduser -c "git clone https://github.com/pryid/dotfiles ~/dotfiles && cp -
 # Update XDG dirs
 su - voiduser -c "xdg-user-dirs-update"
 
-# Optional: LibreWolf browser. It is not available in Void Linux repository, but can installed from third-party repository
+# Optional: LibreWolf browser. It is not available in Void Linux repository, but can be installed from third-party repository
 
 echo 'repository=https://github.com/index-0/librewolf-void/releases/latest/download/' > /etc/xbps.d/20-librewolf.conf
 xbps-install -Su librewolf
@@ -195,7 +195,7 @@ xbps-reconfigure -fa
 exit
 umount -R /mnt && reboot
 
-# Optional: enable dark theme across all GTK applications, disable "close" button
+# Optional: enable a dark theme across all GTK applications and disable the "close" button
 
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 gsettings set org.gnome.desktop.wm.preferences button-layout ':'
