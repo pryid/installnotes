@@ -170,10 +170,10 @@ permit persist :wheel
 permit nopass :video as root cmd shutdown
 EOF
 
-# Install fonts for the user, Inter and JetBrains Mono
+# Install fonts for the user, Inter, JetBrains Mono, Apple Color Emoji
 
 su - voiduser -c "
-mkdir -p ~/.fonts/inter ~/.fonts/jbmono && \
+mkdir -p ~/.fonts/inter ~/.fonts/jbmono ~/.fonts/emoji && \
 
 wget -O inter.zip https://github.com/rsms/inter/releases/download/v4.1/Inter-4.1.zip && \
 unzip -q inter.zip -d ~/.fonts/inter && \
@@ -185,9 +185,10 @@ rm inter.zip && \
 wget -O jetbrains.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/JetBrainsMono.zip && \
 unzip -q jetbrains.zip -d ~/.fonts/jbmono && \
 find ~/.fonts/jbmono -type f ! -name '*.ttf' -delete && \
-rm jetbrains.zip
-"
+rm jetbrains.zip && \
 
+wget -O ~/.fonts/emoji/AppleColorEmoji.ttf https://github.com/samuelngs/apple-emoji-linux/releases/download/v17.4/AppleColorEmoji.ttf
+"
 
 # Download and apply dotfiles
 
