@@ -8,7 +8,7 @@ Server: A machine with Fedora Server
 
 On the client (distrobox with Arch Linux):
 ```bash
-sudo pacman -S xpra.
+sudo pacman -S xpra
 ```
 On the server (Fedora Server):
 ```bash
