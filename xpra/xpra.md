@@ -29,10 +29,10 @@ DISPLAY=:100 firefox
 
 To display the windows of running applications on the client, run the following command in distrobox:
 ```bash
-xpra attach ssh://username@server_ip/100 --compress=0
+xpra attach ssh://username@server_ip/100 --quality=100
 ```
 
-The --compress=0 parameter is suitable for LAN operation to avoid compression artifacts.
+The --quality=100 parameter is suitable for LAN operation to avoid compression artifacts.
 When connecting to a remote machine, it is best not to use this parameter.
 
 
