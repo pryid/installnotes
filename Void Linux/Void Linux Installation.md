@@ -51,7 +51,7 @@ mkdir -p /mnt/boot/efi
 mount -o rw,noatime /dev/sda1 /mnt/boot/efi/
 mkdir -p /mnt/var/cache
 export XBPS_ARCH=x86_64
-xbps-install -Sy -R https://repo-default.voidlinux.org/current/ -r /mnt base-system btrfs-progs acpi alsa-pipewire alsa-utils brightnessctl btop cryptsetup curl dbus elinks fastfetch fish-shell flatpak fuzzel gnome-keyring grub-x86_64-efi gvfs htop intel-video-accel kitty lvm2 mako mesa-dri nano nautilus niri openbsd-netcat opendoas pavucontrol pipewire podman polkit-gnome rsync screen seatd swaylock tlp tree tuigreet turnstile udisks2 vulkan-loader wget xdg-desktop-portal-gnome xdg-user-dirs xdg-utils terminus-font git NetworkManager unzip chrony
+xbps-install -Sy -R https://repo-default.voidlinux.org/current/ -r /mnt base-system btrfs-progs acpi alsa-pipewire alsa-utils brightnessctl btop cryptsetup curl dbus elinks fastfetch fish-shell flatpak fuzzel gnome-keyring grub-x86_64-efi gvfs htop intel-video-accel kitty lvm2 mako mesa-dri nano nautilus niri openbsd-netcat opendoas pavucontrol pipewire podman polkit-gnome rsync screen seatd swaylock tlp tree tuigreet turnstile udisks2 vulkan-loader wget xdg-desktop-portal-gnome xdg-user-dirs xdg-utils terminus-font git NetworkManager unzip chrony micro
 mount -t proc proc /mnt/proc/
 mount -t sysfs sys /mnt/sys/
 mount -o bind /dev /mnt/dev
